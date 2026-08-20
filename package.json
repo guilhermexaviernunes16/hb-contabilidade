@@ -1,0 +1,20 @@
+{
+  "name": "hb-contabilidade-website",
+  "version": "1.0.0",
+  "description": "Website Oficial HB Contabilidade LTDA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["contabilidade", "website", "joao-monlevade", "railway"],
+  "author": "HB Contabilidade",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
