@@ -311,74 +311,204 @@
           </div>
         </div>
 
-        <!-- Hero Right Column: Headquarters Showcase & Quick Actions -->
+        <!-- Hero Right Column: Interactive Multi-Slide Showcase -->
         <div class="lg:col-span-5 relative reveal-right">
           
-          <!-- Image & Card Container -->
-          <div class="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl group">
+          <!-- Slider Container -->
+          <div class="hero-slider-container" id="hero-slider">
             
-            <!-- Headquarters Photo with Gradient Overlay -->
-            <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-100">
-              <img 
-                src="img/sede-hb-contabilidade.jpg" 
-                alt="Sede HB Contabilidade - Rua Palmeiras, 69 - João Monlevade MG" 
-                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                loading="eager"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent"></div>
-              
-              <!-- Floating Address Tag -->
-              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
-                <div class="flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
-                  <i class="fa-solid fa-location-dot text-[#38bdf8]"></i>
-                  <span class="font-bold text-[11px]">Sede Própria • João Monlevade - MG</span>
+            <!-- Navigation Controls (Top Right Overlay) -->
+            <div class="hero-slider-nav">
+              <button class="slider-arrow-btn" id="hero-prev-btn" aria-label="Slide Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <div class="flex items-center gap-1.5 px-1" id="hero-slider-dots">
+                <button class="slider-dot active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="slider-dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="slider-dot" data-slide="2" aria-label="Slide 3"></button>
+              </div>
+              <button class="slider-arrow-btn" id="hero-next-btn" aria-label="Próximo Slide">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <!-- SLIDE 1: A Empresa & Sede Própria -->
+            <div class="hero-slide active" data-slide-index="0">
+              <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-100">
+                <img 
+                  src="img/sede-hb-contabilidade.jpg" 
+                  alt="Sede HB Contabilidade - Rua Palmeiras, 69 - João Monlevade MG" 
+                  class="w-full h-full object-cover object-center"
+                  loading="eager"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a]/85 via-transparent to-black/20"></div>
+                
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                  <div class="flex items-center gap-2 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+                    <i class="fa-solid fa-location-dot text-[#38bdf8]"></i>
+                    <span class="font-bold text-[11px]">Sede Própria • João Monlevade - MG</span>
+                  </div>
+                  <a href="https://maps.app.goo.gl/vARBJg4pX4t1EzAm6" target="_blank" class="bg-white/90 hover:bg-white text-[#0f172a] font-bold text-[10px] px-2.5 py-1.5 rounded-full shadow transition-colors flex items-center gap-1">
+                    <span>Ver Mapa</span> <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                  </a>
                 </div>
-                <a href="https://maps.app.goo.gl/vARBJg4pX4t1EzAm6" target="_blank" class="bg-white/90 hover:bg-white text-[#0f172a] font-bold text-[10px] px-2.5 py-1.5 rounded-full shadow transition-colors flex items-center gap-1">
-                  <span>Ver Mapa</span> <i class="fa-solid fa-arrow-right text-[8px]"></i>
-                </a>
+              </div>
+
+              <!-- Slide 1 Bottom Content -->
+              <div class="p-5 sm:p-6 space-y-4">
+                <div class="grid grid-cols-2 gap-2.5">
+                  <a href="https://parceiro.taskdo.com.br" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 flex items-center gap-2.5 transition-all text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#1c5d99] shadow-sm shrink-0">
+                      <i class="fa-solid fa-user-shield text-xs"></i>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-[#0f172a]">Área do Cliente</span>
+                      <span class="block text-[10px] text-slate-500">Portal TaskDo</span>
+                    </div>
+                  </a>
+
+                  <a href="#central-utilidades" class="p-2.5 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-200 flex items-center gap-2.5 transition-all text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#0284c7] shadow-sm shrink-0">
+                      <i class="fa-solid fa-file-invoice text-xs"></i>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-[#0f172a]">Emissão NFS-e</span>
+                      <span class="block text-[10px] text-slate-500">Prefeituras</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2.5">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    <span class="text-slate-700 font-semibold text-[11px]">Atendimento Online via WhatsApp</span>
+                  </div>
+                  <a href="https://wa.me/5531988906655" target="_blank" class="text-emerald-700 hover:text-emerald-800 font-bold flex items-center gap-1 text-[11px]">
+                    Falar Agora <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                  </a>
+                </div>
               </div>
             </div>
 
-            <!-- Fast Action Access Bottom Strip -->
-            <div class="p-5 sm:p-6 space-y-4">
-              
-              <!-- Quick Link Tiles Grid -->
-              <div class="grid grid-cols-2 gap-2.5">
-                <a href="https://parceiro.taskdo.com.br" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 flex items-center gap-2.5 transition-all text-xs">
-                  <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#1c5d99] shadow-sm shrink-0">
-                    <i class="fa-solid fa-user-shield text-xs"></i>
+            <!-- SLIDE 2: O Sócio Administrador (Fernando Barbosa) -->
+            <div class="hero-slide" data-slide-index="1">
+              <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-gradient-to-br from-[#0f172a] via-[#134575] to-[#1c5d99] p-6 text-white flex flex-col justify-end">
+                <div class="absolute -right-8 -top-8 w-44 h-44 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+                
+                <div class="relative z-10 flex items-center gap-4 mb-2">
+                  <div class="relative shrink-0">
+                    <img 
+                      src="img/fernando-barbosa.png" 
+                      alt="Fernando Barbosa - Sócio Administrador" 
+                      class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover object-top border-2 border-white/80 shadow-lg"
+                    />
+                    <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[9px] border-2 border-[#0f172a]">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
                   </div>
-                  <div>
-                    <span class="block font-bold text-[#0f172a]">Área do Cliente</span>
-                    <span class="block text-[10px] text-slate-500">Portal TaskDo</span>
+                  <div class="space-y-0.5">
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-sm text-blue-200 text-[10px] font-bold uppercase tracking-wider">
+                      <i class="fa-solid fa-user-tie"></i> Liderança & Gestão
+                    </span>
+                    <h4 class="text-lg font-bold text-white font-display">Fernando Barbosa</h4>
+                    <p class="text-xs text-blue-200">Sócio Administrador • +15 Anos</p>
                   </div>
-                </a>
-
-                <a href="#central-utilidades" class="p-2.5 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-200 flex items-center gap-2.5 transition-all text-xs">
-                  <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#0284c7] shadow-sm shrink-0">
-                    <i class="fa-solid fa-file-invoice text-xs"></i>
-                  </div>
-                  <div>
-                    <span class="block font-bold text-[#0f172a]">Emissão NFS-e</span>
-                    <span class="block text-[10px] text-slate-500">Prefeituras</span>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Live Status Alert Box -->
-              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
-                <div class="flex items-center gap-2.5">
-                  <span class="relative flex h-2.5 w-2.5">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-                  </span>
-                  <span class="text-slate-700 font-semibold text-[11px]">Atendimento Online via WhatsApp</span>
                 </div>
-                <a href="https://wa.me/5531988906655" target="_blank" class="text-emerald-700 hover:text-emerald-800 font-bold flex items-center gap-1 text-[11px]">
-                  Falar Agora <i class="fa-solid fa-arrow-right text-[9px]"></i>
-                </a>
+
+                <p class="text-xs text-blue-100 leading-relaxed font-medium">
+                  "Atendimento humanizado e próximo. Nossa equipe cuida de toda a burocracia contábil para você focar no crescimento da sua empresa."
+                </p>
               </div>
 
+              <!-- Slide 2 Bottom Content -->
+              <div class="p-5 sm:p-6 space-y-4">
+                <div class="grid grid-cols-2 gap-2.5">
+                  <a href="https://wa.me/5531988906655?text=Ol%C3%A1%20Fernando%2C%20gostaria%20de%20conversar%20sobre%20a%20minha%20empresa" target="_blank" class="p-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 flex items-center gap-2.5 transition-all text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-emerald-500 text-white flex items-center justify-center text-xs shadow-sm shrink-0">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-emerald-950">Falar com Fernando</span>
+                      <span class="block text-[10px] text-emerald-700">Contato Direto</span>
+                    </div>
+                  </a>
+
+                  <a href="#sobre" class="p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 flex items-center gap-2.5 transition-all text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#1c5d99] shadow-sm shrink-0">
+                      <i class="fa-solid fa-award text-xs"></i>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-[#0f172a]">Nossa História</span>
+                      <span class="block text-[10px] text-slate-500">Desde 2010</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2 text-slate-700 font-semibold text-[11px]">
+                    <i class="fa-solid fa-shield-check text-[#1c5d99]"></i>
+                    <span>Consultoria Personalizada para seu CNPJ</span>
+                  </div>
+                  <a href="#simulador" class="text-[#1c5d99] font-bold text-[11px] hover:underline">
+                    Simular &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3: Tecnologia, App TaskDo & HBCert -->
+            <div class="hero-slide" data-slide-index="2">
+              <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-gradient-to-br from-[#1c5d99] via-[#0284c7] to-[#0369a1] p-6 text-white flex flex-col justify-end">
+                <div class="absolute -right-6 -bottom-6 w-40 h-40 rounded-full bg-white/15 blur-lg pointer-events-none"></div>
+                
+                <div class="relative z-10 space-y-2">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-mobile-screen"></i> 100% Digital & Integrado
+                  </span>
+                  <h4 class="text-xl font-extrabold text-white font-display">App TaskDo & Certificados</h4>
+                  <p class="text-xs text-blue-100 leading-relaxed">
+                    Acompanhe impostos, envie documentos pelo celular e emita seu Certificado Digital por videoconferência com o HBCert.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3 Bottom Content -->
+              <div class="p-5 sm:p-6 space-y-4">
+                <div class="grid grid-cols-2 gap-2.5">
+                  <a href="#app-mobile" class="p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 flex items-center gap-2.5 transition-all text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#1c5d99] shadow-sm shrink-0">
+                      <i class="fa-solid fa-download text-xs"></i>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-[#0f172a]">Baixar App</span>
+                      <span class="block text-[10px] text-slate-500">Android & iOS</span>
+                    </div>
+                  </a>
+
+                  <a href="https://hbcert.com.br/" target="_blank" class="p-2.5 rounded-xl bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-200 flex items-center gap-2.5 transition-all text-xs">
+                    <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-amber-600 shadow-sm shrink-0">
+                      <i class="fa-solid fa-certificate text-xs"></i>
+                    </div>
+                    <div>
+                      <span class="block font-bold text-[#0f172a]">HBCert Digital</span>
+                      <span class="block text-[10px] text-slate-500">Videoconferência</span>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
+                  <div class="flex items-center gap-2 text-slate-700 font-semibold text-[11px]">
+                    <i class="fa-solid fa-headset text-emerald-600"></i>
+                    <span>Suporte Contábil Ágil e sem Robôs</span>
+                  </div>
+                  <a href="https://wa.me/5531988906655" target="_blank" class="text-emerald-700 font-bold text-[11px]">
+                    WhatsApp &rarr;
+                  </a>
+                </div>
+              </div>
             </div>
 
           </div>

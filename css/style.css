@@ -266,15 +266,74 @@ body {
   box-shadow: 0 6px 12px rgba(28, 93, 153, 0.06);
 }
 
-.trust-badge-icon {
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 0.75rem;
+/* ==========================================================================
+   HERO SHOWCASE INTERACTIVE SLIDER
+   ========================================================================== */
+.hero-slider-container {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 35px -10px rgba(15, 23, 42, 0.15);
+}
+
+.hero-slide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.hero-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.hero-slider-nav {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.slider-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-dot.active {
+  width: 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.slider-arrow-btn {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
-  flex-shrink: 0;
+  font-size: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slider-arrow-btn:hover {
+  background: rgba(28, 93, 153, 0.9);
+  transform: scale(1.1);
 }
 .ambient-glow {
   position: absolute;

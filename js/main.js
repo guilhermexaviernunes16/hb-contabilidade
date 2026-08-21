@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHeroSlider();
   initMobileMenu();
   initHubSearchAndTabs();
   initSimulator();
@@ -14,6 +15,82 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   updateCurrentYear();
 });
+
+/* ==========================================================================
+   0. HERO SHOWCASE INTERACTIVE SLIDER
+   ========================================================================== */
+function initHeroSlider() {
+  const container = document.getElementById('hero-slider');
+  if (!container) return;
+
+  const slides = container.querySelectorAll('.hero-slide');
+  const dots = container.querySelectorAll('.slider-dot');
+  const prevBtn = document.getElementById('hero-prev-btn');
+  const nextBtn = document.getElementById('hero-next-btn');
+
+  if (slides.length === 0) return;
+
+  let currentIndex = 0;
+  let autoplayTimer = null;
+
+  function showSlide(index) {
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    currentIndex = index;
+
+    slides.forEach((s, idx) => {
+      s.classList.toggle('active', idx === currentIndex);
+    });
+
+    dots.forEach((d, idx) => {
+      d.classList.toggle('active', idx === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextSlide, 6000);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoplay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoplay();
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.dataset.slide, 10);
+      showSlide(idx);
+      startAutoplay();
+    });
+  });
+
+  container.addEventListener('mouseenter', stopAutoplay);
+  container.addEventListener('mouseleave', startAutoplay);
+
+  startAutoplay();
+}
 
 /* ==========================================================================
    0. SCROLL REVEAL & COUNTER ANIMATIONS
