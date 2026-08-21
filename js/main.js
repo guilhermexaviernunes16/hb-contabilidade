@@ -34,13 +34,27 @@ function initHeroSlider() {
   let autoplayTimer = null;
 
   function showSlide(index) {
-    if (index >= slides.length) index = 0;
-    if (index < 0) index = slides.length - 1;
-    currentIndex = index;
+    let targetIndex = index;
+    if (targetIndex >= slides.length) targetIndex = 0;
+    if (targetIndex < 0) targetIndex = slides.length - 1;
+    if (targetIndex === currentIndex && slides[currentIndex].classList.contains('active')) return;
 
-    slides.forEach((s, idx) => {
-      s.classList.toggle('active', idx === currentIndex);
-    });
+    const currentSlide = slides[currentIndex];
+    const targetSlide = slides[targetIndex];
+
+    // Mark current slide as exiting
+    currentSlide.classList.remove('active');
+    currentSlide.classList.add('exiting');
+
+    // Mark target slide as active
+    targetSlide.classList.remove('exiting');
+    targetSlide.classList.add('active');
+
+    setTimeout(() => {
+      currentSlide.classList.remove('exiting');
+    }, 400);
+
+    currentIndex = targetIndex;
 
     dots.forEach((d, idx) => {
       d.classList.toggle('active', idx === currentIndex);
