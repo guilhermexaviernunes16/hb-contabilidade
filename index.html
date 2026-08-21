@@ -107,10 +107,10 @@
   }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-[#1c5d99] selection:text-white">
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-[#1c5d99] selection:text-white overflow-x-hidden w-full max-w-full">
 
   <!-- Ambient Glow Background Subtle Gradients -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden w-full max-w-full">
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
     <div class="ambient-glow glow-3"></div>
@@ -837,6 +837,15 @@
 
       </div>
 
+      <!-- Toggle Expand / Collapse Hub Cards Button -->
+      <div class="mt-8 text-center" id="hub-toggle-wrapper">
+        <button id="toggle-all-cards-btn" class="btn-secondary py-2.5 px-6 text-xs font-bold inline-flex items-center gap-2">
+          <i class="fa-solid fa-layer-group text-[#1c5d99]"></i>
+          <span id="toggle-cards-text">Ver Todos os Links e Prefeituras (+12)</span>
+          <i class="fa-solid fa-chevron-down text-[10px]" id="toggle-cards-icon"></i>
+        </button>
+      </div>
+
       <!-- No Results Message -->
       <div id="no-results" class="hidden text-center py-16">
         <div class="w-16 h-16 rounded-full bg-slate-100 border border-slate-200 text-slate-400 flex items-center justify-center mx-auto mb-4 text-2xl">
@@ -853,7 +862,7 @@
   </section>
 
   <!-- Nossos Serviços -->
-  <section id="servicos" class="py-24 bg-slate-50 relative overflow-hidden">
+  <section id="servicos" class="py-14 sm:py-20 bg-slate-50 relative overflow-hidden">
     <div class="container mx-auto px-4 max-w-7xl relative z-10">
       
       <!-- Section Header -->
@@ -1767,6 +1776,30 @@
       <i class="fa-brands fa-whatsapp text-3xl"></i>
     </button>
   </div>
+
+  <!-- Mobile Bottom Action Dock (Barra de Atalhos Inferior) -->
+  <nav class="mobile-bottom-dock md:hidden" aria-label="Atalhos Rápidos">
+    <a href="#hero" class="dock-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Início</span>
+    </a>
+    <a href="#central-utilidades" class="dock-item">
+      <i class="fa-solid fa-file-invoice"></i>
+      <span>NFS-e/Links</span>
+    </a>
+    <a href="https://wa.me/5531988906655?text=Ol%C3%A1%2C%20gostaria%20de%20atendimento%20da%20HB%20Contabilidade" target="_blank" class="dock-item dock-highlight">
+      <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+      <span class="text-emerald-700">WhatsApp</span>
+    </a>
+    <a href="https://parceiro.taskdo.com.br" target="_blank" rel="noopener noreferrer" class="dock-item dock-portal">
+      <i class="fa-solid fa-user-shield"></i>
+      <span>Área Cliente</span>
+    </a>
+    <a href="tel:553138516655" class="dock-item">
+      <i class="fa-solid fa-phone"></i>
+      <span>Ligar</span>
+    </a>
+  </nav>
 
   <!-- JavaScript -->
   <script src="js/main.js"></script>

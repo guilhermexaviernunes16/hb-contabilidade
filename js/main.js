@@ -98,20 +98,27 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   2. MEGA HUB - LIVE SEARCH & CATEGORY FILTERING
+   2. MEGA HUB - LIVE SEARCH, COMPACT MODE & CATEGORY FILTERING
    ========================================================================== */
 function initHubSearchAndTabs() {
   const searchInput = document.getElementById('hub-search-input');
   const clearBtn = document.getElementById('clear-search-btn');
   const tabButtons = document.querySelectorAll('.hub-tab-btn');
-  const cards = document.querySelectorAll('.hub-card');
+  const cards = Array.from(document.querySelectorAll('.hub-card'));
   const noResults = document.getElementById('no-results');
+  const toggleBtn = document.getElementById('toggle-all-cards-btn');
+  const toggleWrapper = document.getElementById('hub-toggle-wrapper');
+  const toggleText = document.getElementById('toggle-cards-text');
+  const toggleIcon = document.getElementById('toggle-cards-icon');
 
   let currentCategory = 'all';
+  let isExpanded = false;
+  const INITIAL_LIMIT = 8;
 
   function filterCards() {
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
     let visibleCount = 0;
+    let matchingCards = [];
 
     cards.forEach(card => {
       const categoryMatch = (currentCategory === 'all') || card.dataset.category.includes(currentCategory);
@@ -125,12 +132,39 @@ function initHubSearchAndTabs() {
         keywords.toLowerCase().includes(query);
 
       if (categoryMatch && textMatch) {
+        matchingCards.push(card);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const isFiltered = query.length > 0 || currentCategory !== 'all';
+
+    matchingCards.forEach((card, index) => {
+      if (isFiltered || isExpanded || index < INITIAL_LIMIT) {
         card.style.display = 'flex';
         visibleCount++;
       } else {
         card.style.display = 'none';
       }
     });
+
+    // Toggle button visibility
+    if (toggleWrapper) {
+      if (!isFiltered && matchingCards.length > INITIAL_LIMIT) {
+        toggleWrapper.classList.remove('hidden');
+        if (isExpanded) {
+          if (toggleText) toggleText.textContent = 'Recolher Lista de Links';
+          if (toggleIcon) toggleIcon.className = 'fa-solid fa-chevron-up text-[10px]';
+        } else {
+          const remaining = matchingCards.length - INITIAL_LIMIT;
+          if (toggleText) toggleText.textContent = `Ver Todos os Links e Prefeituras (+${remaining})`;
+          if (toggleIcon) toggleIcon.className = 'fa-solid fa-chevron-down text-[10px]';
+        }
+      } else {
+        toggleWrapper.classList.add('hidden');
+      }
+    }
 
     if (noResults) {
       if (visibleCount === 0) {
@@ -147,6 +181,14 @@ function initHubSearchAndTabs() {
         clearBtn.classList.add('hidden');
       }
     }
+  }
+
+  // Toggle button click
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      filterCards();
+    });
   }
 
   // Category Tab switching
@@ -171,6 +213,8 @@ function initHubSearchAndTabs() {
       searchInput.focus();
     });
   }
+
+  filterCards();
 }
 
 /* ==========================================================================
