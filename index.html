@@ -311,86 +311,74 @@
           </div>
         </div>
 
-        <!-- Hero Right Column: Interactive Card & Quick Access Hub -->
+        <!-- Hero Right Column: Headquarters Showcase & Quick Actions -->
         <div class="lg:col-span-5 relative reveal-right">
           
-          <!-- Glass Card -->
-          <div class="relative rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-xl space-y-6">
+          <!-- Image & Card Container -->
+          <div class="relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-2xl group">
             
-            <!-- Card Header -->
-            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-[#1c5d99]">Acesso Rápido</span>
-                <h3 class="text-xl font-bold text-[#0f172a] font-display">Portal de Serviços HB</h3>
-              </div>
-              <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#1c5d99]">
-                <i class="fa-solid fa-fingerprint text-lg"></i>
+            <!-- Headquarters Photo with Gradient Overlay -->
+            <div class="relative h-64 sm:h-72 w-full overflow-hidden bg-slate-100">
+              <img 
+                src="img/sede-hb-contabilidade.jpg" 
+                alt="Sede HB Contabilidade - Rua Palmeiras, 69 - João Monlevade MG" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a]/80 via-transparent to-transparent"></div>
+              
+              <!-- Floating Address Tag -->
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white text-xs">
+                <div class="flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+                  <i class="fa-solid fa-location-dot text-[#38bdf8]"></i>
+                  <span class="font-bold text-[11px]">Sede Própria • João Monlevade - MG</span>
+                </div>
+                <a href="https://maps.app.goo.gl/vARBJg4pX4t1EzAm6" target="_blank" class="bg-white/90 hover:bg-white text-[#0f172a] font-bold text-[10px] px-2.5 py-1.5 rounded-full shadow transition-colors flex items-center gap-1">
+                  <span>Ver Mapa</span> <i class="fa-solid fa-arrow-right text-[8px]"></i>
+                </a>
               </div>
             </div>
 
-            <!-- Fast Link Cards Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <!-- TaskDo Portal Link -->
-              <a href="https://parceiro.taskdo.com.br" target="_blank" rel="noopener noreferrer" class="quick-link-tile group">
-                <div class="tile-icon bg-blue-50 text-[#1c5d99] border border-blue-100 group-hover:bg-[#1c5d99] group-hover:text-white">
-                  <i class="fa-solid fa-user-gear"></i>
-                </div>
-                <div class="tile-content">
-                  <span class="tile-title">Área do Cliente</span>
-                  <span class="tile-subtitle">Sistema TaskDo</span>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-[#1c5d99] ml-auto"></i>
-              </a>
+            <!-- Fast Action Access Bottom Strip -->
+            <div class="p-5 sm:p-6 space-y-4">
+              
+              <!-- Quick Link Tiles Grid -->
+              <div class="grid grid-cols-2 gap-2.5">
+                <a href="https://parceiro.taskdo.com.br" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 flex items-center gap-2.5 transition-all text-xs">
+                  <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#1c5d99] shadow-sm shrink-0">
+                    <i class="fa-solid fa-user-shield text-xs"></i>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-[#0f172a]">Área do Cliente</span>
+                    <span class="block text-[10px] text-slate-500">Portal TaskDo</span>
+                  </div>
+                </a>
 
-              <!-- NFSe Fast Link -->
-              <a href="#central-utilidades" class="quick-link-tile group">
-                <div class="tile-icon bg-sky-50 text-[#0284c7] border border-sky-100 group-hover:bg-[#0284c7] group-hover:text-white">
-                  <i class="fa-solid fa-file-invoice-dollar"></i>
-                </div>
-                <div class="tile-content">
-                  <span class="tile-title">Emissão de NFSe</span>
-                  <span class="tile-subtitle">Monlevade & Região</span>
-                </div>
-                <i class="fa-solid fa-chevron-right text-xs text-slate-400 group-hover:text-[#1c5d99] ml-auto"></i>
-              </a>
-
-              <!-- Digital Certificate -->
-              <a href="https://hbcert.com.br/" target="_blank" class="quick-link-tile group">
-                <div class="tile-icon bg-amber-50 text-amber-600 border border-amber-100 group-hover:bg-amber-600 group-hover:text-white">
-                  <i class="fa-solid fa-certificate"></i>
-                </div>
-                <div class="tile-content">
-                  <span class="tile-title">Certificado Digital</span>
-                  <span class="tile-subtitle">HBCert / Syngular</span>
-                </div>
-                <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-amber-600 ml-auto"></i>
-              </a>
-
-              <!-- Remote Support -->
-              <a href="https://www.ultraviewer.net/pt/UltraViewer_setup_6.6_pt.exe" target="_blank" class="quick-link-tile group">
-                <div class="tile-icon bg-emerald-50 text-emerald-600 border border-emerald-100 group-hover:bg-emerald-600 group-hover:text-white">
-                  <i class="fa-solid fa-headset"></i>
-                </div>
-                <div class="tile-content">
-                  <span class="tile-title">Suporte Remoto</span>
-                  <span class="tile-subtitle">UltraViewer Baixar</span>
-                </div>
-                <i class="fa-solid fa-download text-xs text-slate-400 group-hover:text-emerald-600 ml-auto"></i>
-              </a>
-            </div>
-
-            <!-- Live Status Alert Box -->
-            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
-              <div class="flex items-center gap-3">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                </span>
-                <span class="text-slate-700 font-semibold">Equipe de Atendimento Online</span>
+                <a href="#central-utilidades" class="p-2.5 rounded-xl bg-slate-50 hover:bg-sky-50 border border-slate-200 hover:border-sky-200 flex items-center gap-2.5 transition-all text-xs">
+                  <div class="w-8 h-8 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-[#0284c7] shadow-sm shrink-0">
+                    <i class="fa-solid fa-file-invoice text-xs"></i>
+                  </div>
+                  <div>
+                    <span class="block font-bold text-[#0f172a]">Emissão NFS-e</span>
+                    <span class="block text-[10px] text-slate-500">Prefeituras</span>
+                  </div>
+                </a>
               </div>
-              <a href="https://wa.me/5531988906655" target="_blank" class="text-[#1c5d99] hover:text-[#134575] font-bold flex items-center gap-1">
-                Iniciar Chat <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+
+              <!-- Live Status Alert Box -->
+              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs">
+                <div class="flex items-center gap-2.5">
+                  <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                  </span>
+                  <span class="text-slate-700 font-semibold text-[11px]">Atendimento Online via WhatsApp</span>
+                </div>
+                <a href="https://wa.me/5531988906655" target="_blank" class="text-emerald-700 hover:text-emerald-800 font-bold flex items-center gap-1 text-[11px]">
+                  Falar Agora <i class="fa-solid fa-arrow-right text-[9px]"></i>
+                </a>
+              </div>
+
             </div>
 
           </div>
@@ -400,8 +388,43 @@
     </div>
   </section>
 
+  <!-- Marquee Ticker de Segmentos Atendidos (Sem Emojis, Ícones Minimalistas) -->
+  <section class="py-6 bg-white border-y border-slate-200 overflow-hidden">
+    <div class="container mx-auto px-4 max-w-7xl mb-3 flex items-center justify-between">
+      <span class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-2">
+        <i class="fa-solid fa-briefcase text-[#1c5d99]"></i> Especialistas nos Principais Segmentos
+      </span>
+      <span class="text-[11px] text-slate-400 font-medium hidden sm:inline-block">+15 Anos de Experiência Multissetorial</span>
+    </div>
+
+    <div class="marquee-container">
+      <!-- First Track -->
+      <div class="marquee-track">
+        <div class="marquee-item"><i class="fa-solid fa-cart-shopping"></i> Comércio & Varejo</div>
+        <div class="marquee-item"><i class="fa-solid fa-stethoscope"></i> Clínicas & Saúde</div>
+        <div class="marquee-item"><i class="fa-solid fa-laptop-code"></i> Prestadores de Serviços & TI</div>
+        <div class="marquee-item"><i class="fa-solid fa-helmet-safety"></i> Engenharia & Construção Civil</div>
+        <div class="marquee-item"><i class="fa-solid fa-scale-balanced"></i> Sociedades de Advogados</div>
+        <div class="marquee-item"><i class="fa-solid fa-industry"></i> Indústrias & Manufatura</div>
+        <div class="marquee-item"><i class="fa-solid fa-truck-fast"></i> Transportes & Logística</div>
+        <div class="marquee-item"><i class="fa-solid fa-utensils"></i> Bares, Restaurantes & Franquias</div>
+      </div>
+      <!-- Duplicate Track for Seamless Loop -->
+      <div class="marquee-track" aria-hidden="true">
+        <div class="marquee-item"><i class="fa-solid fa-cart-shopping"></i> Comércio & Varejo</div>
+        <div class="marquee-item"><i class="fa-solid fa-stethoscope"></i> Clínicas & Saúde</div>
+        <div class="marquee-item"><i class="fa-solid fa-laptop-code"></i> Prestadores de Serviços & TI</div>
+        <div class="marquee-item"><i class="fa-solid fa-helmet-safety"></i> Engenharia & Construção Civil</div>
+        <div class="marquee-item"><i class="fa-solid fa-scale-balanced"></i> Sociedades de Advogados</div>
+        <div class="marquee-item"><i class="fa-solid fa-industry"></i> Indústrias & Manufatura</div>
+        <div class="marquee-item"><i class="fa-solid fa-truck-fast"></i> Transportes & Logística</div>
+        <div class="marquee-item"><i class="fa-solid fa-utensils"></i> Bares, Restaurantes & Franquias</div>
+      </div>
+    </div>
+  </section>
+
   <!-- Central de Utilidades e Links Governamentais / Prefeituras (MEGA HUB) -->
-  <section id="central-utilidades" class="py-20 bg-white border-y border-slate-200 relative">
+  <section id="central-utilidades" class="py-14 sm:py-20 bg-slate-50 border-b border-slate-200 relative">
     <div class="container mx-auto px-4 max-w-7xl">
       
       <!-- Section Header -->
@@ -1008,8 +1031,64 @@
     </div>
   </section>
 
+  <!-- Como Migrar para a HB em 3 Passos Simples (Timeline Interativa) -->
+  <section class="py-16 bg-white border-t border-slate-200 relative overflow-hidden">
+    <div class="container mx-auto px-4 max-w-7xl">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3 reveal">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-[#1c5d99] border border-blue-200 text-xs font-bold uppercase tracking-wider">
+          <i class="fa-solid fa-route"></i> Transição Descomplicada
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0f172a] font-display">
+          Como funciona a migração para a HB em 3 passos
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Mudar de contabilidade é um direito da sua empresa e muito mais simples do que você imagina. Cuidamos de todo o processo burocrático.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="step-card reveal delay-100">
+          <div class="step-badge">01</div>
+          <h3 class="text-lg font-bold text-[#0f172a] font-display mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-file-lines text-[#1c5d99]"></i> Diagnóstico Gratuito
+          </h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Você conversa com nossos consultores via WhatsApp, apresenta seu segmento e realizamos uma análise tributária prévia sem compromisso.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card reveal delay-200">
+          <div class="step-badge">02</div>
+          <h3 class="text-lg font-bold text-[#0f172a] font-display mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-handshake text-[#0284c7]"></i> Transição sem Atrito
+          </h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Nossa equipe cuida do termo de transferência e da coleta de saldos contábeis e fiscais com o seu antigo escritório. Você não precisa se preocupar.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card reveal delay-300">
+          <div class="step-badge">03</div>
+          <h3 class="text-lg font-bold text-[#0f172a] font-display mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-rocket text-emerald-600"></i> Acesso & Crescimento
+          </h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+            Liberamos seu acesso exclusivo ao Portal e App TaskDo. Sua empresa passa a contar com suporte consultivo de alta performance e total segurança.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- Simulador Interativo de Honorários & Regime Tributário -->
-  <section id="simulador" class="py-20 bg-white border-y border-slate-200 relative">
+  <section id="simulador" class="py-14 sm:py-20 bg-slate-50 border-y border-slate-200 relative">
     <div class="container mx-auto px-4 max-w-5xl">
       
       <div class="text-center max-w-2xl mx-auto mb-12 space-y-3 reveal">
@@ -1330,6 +1409,50 @@
         </div>
 
       </div>
+
+      <!-- Trust & Certification Badges Strip -->
+      <div class="mt-14 pt-10 border-t border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon bg-blue-50 text-[#1c5d99] border border-blue-100">
+            <i class="fa-solid fa-building-columns"></i>
+          </div>
+          <div>
+            <span class="block text-xs font-bold text-[#0f172a]">CRC-MG Ativo</span>
+            <span class="block text-[10px] text-slate-500">Registro Regularizado</span>
+          </div>
+        </div>
+
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon bg-emerald-50 text-emerald-600 border border-emerald-100">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <span class="block text-xs font-bold text-[#0f172a]">LGPD Compliant</span>
+            <span class="block text-[10px] text-slate-500">Dados Criptografados</span>
+          </div>
+        </div>
+
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon bg-amber-50 text-amber-600 border border-amber-100">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div>
+            <span class="block text-xs font-bold text-[#0f172a]">ICP-Brasil</span>
+            <span class="block text-[10px] text-slate-500">HBCert & Syngular ID</span>
+          </div>
+        </div>
+
+        <div class="trust-badge-card">
+          <div class="trust-badge-icon bg-sky-50 text-[#0284c7] border border-sky-100">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <div>
+            <span class="block text-xs font-bold text-[#0f172a]">TaskDo & Qyon</span>
+            <span class="block text-[10px] text-slate-500">Plataformas em Nuvem</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
