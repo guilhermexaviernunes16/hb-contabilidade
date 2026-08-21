@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://hbcontabilidade.com/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://hbcontabilidade.com/img/sede-hb-contabilidade.jpg</image:loc>
+      <image:title>Sede HB Contabilidade - João Monlevade MG</image:title>
+      <image:caption>Fachada moderna da sede da HB Contabilidade na Rua Palmeiras, 69 - Alvorada</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hbcontabilidade.com/img/fernando-barbosa.png</image:loc>
+      <image:title>Fernando Barbosa - Sócio Administrador</image:title>
+      <image:caption>Contador e Sócio Administrador da HB Contabilidade LTDA</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hbcontabilidade.com/#central-utilidades</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hbcontabilidade.com/#servicos</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hbcontabilidade.com/#simulador</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hbcontabilidade.com/#app-mobile</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hbcontabilidade.com/#sobre</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hbcontabilidade.com/#contato</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

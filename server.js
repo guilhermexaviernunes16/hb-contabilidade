@@ -15,6 +15,17 @@ app.use(express.static(path.join(__dirname), {
   etag: true
 }));
 
+// Dedicated routes for search engines and crawlers
+app.get('/sitemap.xml', (req, res) => {
+  res.header('Content-Type', 'application/xml');
+  res.sendFile(path.join(__dirname, 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+  res.header('Content-Type', 'text/plain');
+  res.sendFile(path.join(__dirname, 'robots.txt'));
+});
+
 // Fallback to index.html for any route
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));

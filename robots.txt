@@ -1,0 +1,23 @@
+# robots.txt for HB Contabilidade
+# https://hbcontabilidade.com/
+
+User-agent: *
+Allow: /
+Disallow: /scratch/
+Disallow: /node_modules/
+
+# Crawlers específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /img/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap Index
+Sitemap: https://hbcontabilidade.com/sitemap.xml
