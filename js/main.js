@@ -37,22 +37,10 @@ function initHeroSlider() {
     let targetIndex = index;
     if (targetIndex >= slides.length) targetIndex = 0;
     if (targetIndex < 0) targetIndex = slides.length - 1;
-    if (targetIndex === currentIndex && slides[currentIndex].classList.contains('active')) return;
 
-    const currentSlide = slides[currentIndex];
-    const targetSlide = slides[targetIndex];
-
-    // Mark current slide as exiting
-    currentSlide.classList.remove('active');
-    currentSlide.classList.add('exiting');
-
-    // Mark target slide as active
-    targetSlide.classList.remove('exiting');
-    targetSlide.classList.add('active');
-
-    setTimeout(() => {
-      currentSlide.classList.remove('exiting');
-    }, 400);
+    slides.forEach((s, idx) => {
+      s.classList.toggle('active', idx === targetIndex);
+    });
 
     currentIndex = targetIndex;
 

@@ -281,41 +281,23 @@ body {
 .hero-slide {
   display: none;
   opacity: 0;
-  transform: translateX(20px) scale(0.98);
+  transform-origin: center center;
+  transform: scale(0.92);
 }
 
 .hero-slide.active {
   display: block;
-  animation: heroSlideEnter 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroZoomIn 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.hero-slide.exiting {
-  display: block;
-  animation: heroSlideExit 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes heroSlideEnter {
+@keyframes heroZoomIn {
   0% {
     opacity: 0;
-    transform: translateX(24px) scale(0.96);
-    filter: blur(4px);
+    transform: scale(0.9);
   }
   100% {
     opacity: 1;
-    transform: translateX(0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes heroSlideExit {
-  0% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-24px) scale(0.96);
-    filter: blur(4px);
+    transform: scale(1);
   }
 }
 
