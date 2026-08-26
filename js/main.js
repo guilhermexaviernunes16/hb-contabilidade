@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initNavDropdown();
   initHeroSlider();
   initMobileMenu();
   initHubSearchAndTabs();
@@ -17,9 +18,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   0. HERO SHOWCASE INTERACTIVE SLIDER
+   0. NAV DROPDOWN INTERACTION
    ========================================================================== */
-function initHeroSlider() {
+function initNavDropdown() {
+  const wrappers = document.querySelectorAll('.nav-dropdown-wrapper');
+  wrappers.forEach(wrapper => {
+    const toggle = wrapper.querySelector('a');
+    const menu = wrapper.querySelector('.nav-dropdown-menu');
+    if (!toggle || !menu) return;
+
+    // Toggle on click for touch screens / fast navigation
+    toggle.addEventListener('click', (e) => {
+      // If on desktop and clicking the link, allow navigation to #central-utilidades only if already open
+      if (window.innerWidth >= 1280) {
+        // smooth scroll to central if clicked
+      }
+    });
+  });
+}
   const container = document.getElementById('hero-slider');
   if (!container) return;
 
