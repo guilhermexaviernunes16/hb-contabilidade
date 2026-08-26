@@ -36,6 +36,7 @@ function initNavDropdown() {
     });
   });
 }
+function initHeroSlider() {
   const container = document.getElementById('hero-slider');
   if (!container) return;
 
