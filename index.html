@@ -194,71 +194,73 @@
   </div>
 
   <!-- Top Announcement / Fast Info Bar -->
-  <aside class="relative z-40 bg-[#0f172a] text-xs text-slate-300 py-2.5 transition-all">
-    <div class="container mx-auto px-4 max-w-7xl flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-6 flex-wrap">
-        <span class="flex items-center gap-2 text-slate-300">
+  <aside class="relative z-40 bg-[#0f172a] text-xs text-slate-300 py-2 border-b border-slate-800/80">
+    <div class="container mx-auto px-4 max-w-7xl flex items-center justify-between gap-4">
+      
+      <!-- Top Left: Location & 50-Year Heritage Badge -->
+      <div class="flex items-center gap-4 text-[11px]">
+        <span class="flex items-center gap-1.5 text-slate-300">
           <i class="fa-solid fa-location-dot text-[#38bdf8]"></i>
           <span class="hidden sm:inline">Rua Palmeiras, 69 - Alvorada, João Monlevade - MG</span>
           <span class="sm:hidden">João Monlevade - MG</span>
         </span>
-        <span class="hidden md:flex items-center gap-2 text-slate-400">
-          <i class="fa-solid fa-clock text-[#38bdf8]"></i>
-          Segunda a Sexta: 08h às 18h
-        </span>
-        <span class="hidden lg:inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 font-bold text-[11px]">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-          Fundada nos anos 1970 • Mais de 50 Anos de Tradição
+        <span class="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/90 border border-emerald-500/30 text-emerald-400 font-bold text-[10px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          Fundada nos anos 1970 • +50 Anos de Tradição
         </span>
       </div>
-      <div class="flex items-center gap-4 ml-auto">
-        <a href="tel:553138516655" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5 font-bold text-white">
+
+      <!-- Top Right: Phone, Email & Social Links -->
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="tel:553138516655" class="hover:text-cyan-400 transition-colors flex items-center gap-1.5 font-bold text-white whitespace-nowrap">
           <i class="fa-solid fa-phone text-[#38bdf8]"></i> (31) 3851-6655
         </a>
-        <span class="text-slate-600">|</span>
-        <a href="mailto:contato@hbcontabilidade.com" class="hidden sm:flex hover:text-cyan-400 transition-colors items-center gap-1.5 text-slate-300">
+        <span class="hidden md:inline text-slate-600">|</span>
+        <a href="mailto:contato@hbcontabilidade.com" class="hidden md:flex hover:text-cyan-400 transition-colors items-center gap-1.5 text-slate-300 whitespace-nowrap">
           <i class="fa-solid fa-envelope text-[#38bdf8]"></i> contato@hbcontabilidade.com
         </a>
-        <div class="flex items-center gap-2 pl-2 border-l border-slate-700">
-          <a href="https://www.instagram.com/hbcontabilidade.ltda/" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-slate-800 hover:bg-gradient-to-tr hover:from-amber-500 hover:to-fuchsia-600 hover:text-white flex items-center justify-center text-slate-300 transition-all" title="Instagram">
-            <i class="fa-brands fa-instagram text-xs"></i>
+        <div class="flex items-center gap-1.5 pl-3 border-l border-slate-700/80">
+          <a href="https://www.instagram.com/hbcontabilidade.ltda/" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-slate-800 hover:bg-gradient-to-tr hover:from-amber-500 hover:to-fuchsia-600 hover:text-white flex items-center justify-center text-slate-300 transition-all" title="Instagram">
+            <i class="fa-brands fa-instagram text-[10px]"></i>
           </a>
-          <a href="https://www.facebook.com/hbcontabilidade" target="_blank" rel="noopener noreferrer" class="w-7 h-7 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center text-slate-300 transition-all" title="Facebook">
-            <i class="fa-brands fa-facebook-f text-xs"></i>
+          <a href="https://www.facebook.com/hbcontabilidade" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-slate-800 hover:bg-blue-600 hover:text-white flex items-center justify-center text-slate-300 transition-all" title="Facebook">
+            <i class="fa-brands fa-facebook-f text-[10px]"></i>
           </a>
         </div>
       </div>
+
     </div>
   </aside>
 
   <!-- Main Navigation Header -->
   <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm transition-all duration-300">
     <div class="container mx-auto px-4 max-w-7xl">
-      <div class="flex items-center justify-between h-20 gap-3 xl:gap-6 flex-nowrap">
+      <div class="flex items-center justify-between h-20 gap-4 flex-nowrap">
+        
         <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-3 shrink-0 group">
+        <a href="#hero" class="flex items-center gap-3 shrink-0 group focus:outline-none" aria-label="HB Contabilidade">
           <div class="relative flex items-center justify-center p-1 rounded-xl bg-white transition-transform group-hover:scale-105 duration-300">
-            <img src="img/hb_logo.png" alt="HB Contabilidade" class="h-10 sm:h-12 w-auto object-contain" />
+            <img src="img/hb_logo.png" alt="HB Contabilidade" class="h-11 sm:h-12 w-auto object-contain" />
           </div>
-          <div class="hidden xl:block shrink-0">
-            <div class="font-display font-extrabold text-base text-[#0f172a] leading-tight whitespace-nowrap">HB CONTABILIDADE</div>
-          </div>
+          <span class="font-display font-extrabold text-lg text-[#0f172a] leading-none tracking-tight whitespace-nowrap">
+            HB CONTABILIDADE
+          </span>
         </a>
 
-        <!-- Desktop Navigation Menu (With Interactive Dropdowns) -->
-        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 shrink-0">
-          <a href="#hero" class="nav-link whitespace-nowrap">Início</a>
-          <a href="#servicos" class="nav-link whitespace-nowrap">Serviços</a>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden xl:flex items-center gap-1">
+          <a href="#hero" class="nav-link">Início</a>
+          <a href="#servicos" class="nav-link">Serviços</a>
           
-          <!-- Central de Links Dropdown Container -->
+          <!-- Central de Links Dropdown -->
           <div class="relative group">
-            <a href="#central-utilidades" class="nav-link whitespace-nowrap flex items-center gap-1.5 cursor-pointer">
+            <a href="#central-utilidades" class="nav-link flex items-center gap-1.5 cursor-pointer">
               <span>Central de Links</span>
-              <span class="inline-flex items-center px-1.5 py-0.5 text-[9px] font-bold uppercase rounded bg-blue-100 text-[#1c5d99] border border-blue-200">Útil</span>
+              <span class="inline-flex items-center px-1.5 py-0.5 text-[9px] font-bold uppercase rounded bg-blue-50 text-[#1c5d99] border border-blue-200">Útil</span>
               <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-[#1c5d99] transition-transform duration-200 group-hover:rotate-180"></i>
             </a>
 
-            <!-- Mega Dropdown Menu - Positioned Absolutely and Hidden by Default -->
+            <!-- Mega Dropdown Menu -->
             <div class="nav-dropdown-menu nav-dropdown-mega hidden group-hover:grid absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-slate-200 rounded-2xl shadow-2xl p-6 z-50 w-[780px] max-w-[92vw] grid-cols-3 gap-6">
               <!-- Column 1: NFSe Prefeituras -->
               <div>
@@ -362,47 +364,46 @@
             </div>
           </div>
 
-          <a href="#area-cliente" class="nav-link whitespace-nowrap">Área do Cliente</a>
-          <a href="#simulador" class="nav-link whitespace-nowrap">Simulador</a>
-          <a href="#sobre" class="nav-link whitespace-nowrap">A Empresa</a>
-          <a href="#app-mobile" class="nav-link whitespace-nowrap">App</a>
-          <a href="#contato" class="nav-link whitespace-nowrap">Contato</a>
+          <a href="#simulador" class="nav-link">Simulador</a>
+          <a href="#sobre" class="nav-link">A Empresa</a>
+          <a href="#app-mobile" class="nav-link">App</a>
+          <a href="#contato" class="nav-link">Contato</a>
         </nav>
 
-        <!-- Header Actions / Direct Portals (No Wrap) -->
-        <div class="hidden md:flex items-center gap-2.5 shrink-0">
-          <!-- Client Area Button -->
+        <!-- Right Side Action Buttons -->
+        <div class="hidden lg:flex items-center gap-3 shrink-0">
+          <!-- Área do Cliente Highlighted Button -->
           <a href="#area-cliente" class="btn-client-portal group shrink-0">
             <span class="w-7 h-7 rounded-lg bg-[#1c5d99]/10 flex items-center justify-center text-[#1c5d99] group-hover:bg-[#1c5d99] group-hover:text-white transition-all shrink-0">
               <i class="fa-solid fa-user-shield text-xs"></i>
             </span>
             <div class="text-left leading-tight whitespace-nowrap">
-              <span class="block text-[9px] uppercase font-bold text-[#1c5d99] tracking-wider">Acesso Rápido</span>
+              <span class="block text-[9px] uppercase font-bold text-[#1c5d99] tracking-wider">Portal Online</span>
               <span class="font-bold text-xs text-[#0f172a]">Área do Cliente</span>
             </div>
           </a>
 
-          <!-- Webmail / Fast Action -->
+          <!-- Webmail Icon Button -->
           <a href="https://mail.hostinger.com/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-[#1c5d99] border border-slate-200 transition-all shrink-0" title="Acessar Webmail Hostinger">
             <i class="fa-solid fa-envelope-open-text text-sm"></i>
           </a>
 
-          <!-- WhatsApp Primary CTA -->
-          <a href="https://wa.me/5531988906655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20HB%20Contabilidade" target="_blank" rel="noopener noreferrer" class="btn-primary whitespace-nowrap shrink-0">
+          <!-- WhatsApp CTA Button -->
+          <a href="https://wa.me/5531988906655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista%20da%20HB%20Contabilidade" target="_blank" rel="noopener noreferrer" class="btn-primary whitespace-nowrap shrink-0 py-2.5 px-5 text-xs font-bold">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
             <span>Falar Conosco</span>
-            <i class="fa-brands fa-whatsapp text-base"></i>
           </a>
         </div>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 hover:text-[#1c5d99] focus:outline-none" aria-label="Abrir Menu">
+        <button id="mobile-menu-btn" class="xl:hidden p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 hover:text-[#1c5d99] focus:outline-none" aria-label="Abrir Menu">
           <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Drawer Navigation -->
-    <div id="mobile-menu" class="lg:hidden hidden bg-white border-b border-slate-200 shadow-xl transition-all duration-300 px-4 py-6">
+    <div id="mobile-menu" class="xl:hidden hidden bg-white border-b border-slate-200 shadow-xl transition-all duration-300 px-4 py-6">
       <nav class="flex flex-col gap-3">
         <a href="#hero" class="mobile-nav-link">
           <i class="fa-solid fa-house text-[#1c5d99] w-6"></i> Início
@@ -492,46 +493,19 @@
           </div>
         </div>
 
-        <!-- Hero Right Column: Logo Showcase Presentation -->
+        <!-- Hero Right Column: Big Standalone Logo Display -->
         <div class="lg:col-span-5 relative reveal-right flex items-center justify-center">
-          <div class="relative w-full max-w-md p-8 sm:p-10 rounded-3xl bg-white/95 backdrop-blur-xl border border-slate-200/90 shadow-2xl flex flex-col items-center justify-center text-center group transition-all duration-300 hover:shadow-blue-900/15 hover:-translate-y-1">
+          <div class="relative w-full flex items-center justify-center p-4">
+            <!-- Subtle Ambient Glow Behind Logo -->
+            <div class="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-gradient-to-tr from-[#1c5d99]/20 to-[#0284c7]/20 blur-3xl pointer-events-none"></div>
             
-            <!-- Subtle Decorative Background Glow -->
-            <div class="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-[#1c5d99]/10 blur-2xl pointer-events-none"></div>
-            <div class="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-[#0284c7]/10 blur-2xl pointer-events-none"></div>
-
-            <!-- Big Main Logo Display -->
-            <div class="relative z-10 p-8 rounded-2xl bg-white border border-slate-100 shadow-sm transition-transform duration-500 group-hover:scale-105 mb-6 w-full flex items-center justify-center">
-              <img 
-                src="img/hb_logo.png" 
-                alt="HB Contabilidade - Tradição e Futuro" 
-                class="w-full max-w-[280px] h-auto object-contain mx-auto"
-                loading="eager"
-              />
-            </div>
-
-            <!-- Tagline / Trust Badges -->
-            <div class="relative z-10 space-y-2">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-[#1c5d99] border border-blue-100 text-xs font-bold uppercase tracking-wider">
-                <i class="fa-solid fa-award"></i> Mais de 50 Anos de Tradição
-              </div>
-              <p class="text-xs text-slate-500 font-medium leading-relaxed">
-                Solidez, confiança e excelência em gestão contábil desde a década de 1970 em João Monlevade e Região.
-              </p>
-            </div>
-
-            <!-- Quick Access Direct Shortcuts -->
-            <div class="relative z-10 grid grid-cols-2 gap-3 w-full pt-5 mt-5 border-t border-slate-100 text-xs">
-              <a href="#area-cliente" class="p-3 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 flex items-center justify-center gap-2 font-bold text-[#0f172a] transition-all">
-                <i class="fa-solid fa-user-shield text-[#1c5d99]"></i>
-                <span>Área Cliente</span>
-              </a>
-              <a href="https://wa.me/5531988906655" target="_blank" class="p-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 flex items-center justify-center gap-2 font-bold text-emerald-800 transition-all">
-                <i class="fa-brands fa-whatsapp text-emerald-600"></i>
-                <span>WhatsApp</span>
-              </a>
-            </div>
-
+            <!-- Big Official Logo -->
+            <img 
+              src="img/hb_logo.png" 
+              alt="HB Contabilidade" 
+              class="relative z-10 w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[480px] h-auto object-contain transition-transform duration-500 hover:scale-105 drop-shadow-2xl select-none"
+              loading="eager"
+            />
           </div>
         </div>
 
