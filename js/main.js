@@ -341,7 +341,7 @@ function initSimulator() {
       planDesc.textContent = 'Gestão fiscal avançada, departamento pessoal eSocial completo, conciliação de XMLs e reuniões de diagnóstico periódicas.';
     } else {
       planName.textContent = 'Plano HB Enterprise & Lucro Real';
-      planDesc.textContent = 'Consultoria tributária de alta performance, BPO financeiro integrado, relatórios executivos de DRE e suporte dedicado.';
+      planDesc.textContent = 'Consultoria tributária de alta performance, gestão integrada de notas e documentos fiscais, relatórios executivos de DRE e suporte dedicado.';
     }
   }
 
