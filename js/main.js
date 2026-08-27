@@ -254,7 +254,7 @@ function initHubSearchAndTabs() {
           if (toggleIcon) toggleIcon.className = 'fa-solid fa-chevron-up text-[10px]';
         } else {
           const remaining = matchingCards.length - INITIAL_LIMIT;
-          if (toggleText) toggleText.textContent = `Ver Todos os Links e Prefeituras (+${remaining})`;
+          if (toggleText) toggleText.textContent = `Ver Todos os Links (+${remaining})`;
           if (toggleIcon) toggleIcon.className = 'fa-solid fa-chevron-down text-[10px]';
         }
       } else {
