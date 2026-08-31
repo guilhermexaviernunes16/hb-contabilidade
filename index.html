@@ -224,6 +224,11 @@
 
       <!-- Top Right: Phone, Email & Social Links -->
       <div class="flex items-center gap-4 text-[11px]">
+        <a href="https://parceiro.taskdo.com.br/autenticacao/login" target="_blank" rel="noopener noreferrer"
+          class="hidden md:flex hover:text-cyan-400 transition-colors items-center gap-1.5 text-cyan-300 font-semibold whitespace-nowrap">
+          <i class="fa-solid fa-calendar-check text-[#38bdf8]"></i> Agenda de Obrigações
+        </a>
+        <span class="hidden md:inline text-slate-600">|</span>
         <a href="tel:553138516655"
           class="hover:text-cyan-400 transition-colors flex items-center gap-1.5 font-bold text-white whitespace-nowrap">
           <i class="fa-solid fa-phone text-[#38bdf8]"></i> (31) 3851-6655
@@ -308,7 +313,7 @@
                 <div class="space-y-1">
                   <a href="https://parceiro.taskdo.com.br/autenticacao/login" target="_blank" rel="noopener noreferrer"
                     class="nav-dropdown-item font-semibold text-[#0f172a]">
-                    <i class="fa-solid fa-clipboard-check text-[#1c5d99]"></i> Agenda de Obrigações (Taskdo)
+                    <i class="fa-solid fa-clipboard-check text-[#1c5d99]"></i> Agenda de Obrigações
                   </a>
                   <a href="https://portal.qyon.com/login" target="_blank" rel="noopener noreferrer"
                     class="nav-dropdown-item font-semibold text-fuchsia-700 bg-fuchsia-50/50">
@@ -493,7 +498,7 @@
           <i class="fa-solid fa-briefcase text-[#1c5d99] w-6"></i> Nossos Serviços
         </a>
         <a href="#area-cliente" class="mobile-nav-link">
-          <i class="fa-solid fa-user-shield text-[#1c5d99] w-6"></i> Área do Cliente (TaskDo, Emissor, Qyon)
+          <i class="fa-solid fa-user-shield text-[#1c5d99] w-6"></i> Área do Cliente (Agenda de Obrigações, Emissor, Qyon)
         </a>
         <a href="#central-utilidades" class="mobile-nav-link">
           <i class="fa-solid fa-link text-[#1c5d99] w-6"></i> Central de Links Úteis (NFSe / MEI / Certidões)
@@ -548,34 +553,48 @@
             documentos fiscais, conte com atendimento humanizado aliado à máxima tecnologia.
           </p>
 
-          <!-- Destaques Estratégicos: HB Atende & Emissor Próprio -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+          <!-- Destaques Estratégicos: HB Atende, Emissor Próprio & Agenda de Obrigações -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
             <!-- HB Atende -->
             <a href="https://wa.me/553138516655?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20o%20HB%20Atende"
               target="_blank" rel="noopener noreferrer"
-              class="p-3.5 rounded-2xl bg-blue-50/70 hover:bg-blue-100/70 border border-blue-200/80 flex items-center gap-3 transition-all duration-300 shadow-sm hover:shadow group text-left">
+              class="p-3 sm:p-3.5 rounded-2xl bg-blue-50/70 hover:bg-blue-100/70 border border-blue-200/80 flex items-center gap-2.5 sm:gap-3 transition-all duration-300 shadow-sm hover:shadow group text-left">
               <div
                 class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm shrink-0 border border-blue-100 group-hover:scale-105 transition-transform">
                 <img src="img/whatsapp_azul.png" alt="HB Atende WhatsApp" class="w-6 h-6 object-contain" />
               </div>
-              <div class="leading-tight">
-                <span class="block text-[10px] font-bold uppercase tracking-wider text-[#1c5d99]">Atendimento ao
+              <div class="leading-tight min-w-0">
+                <span class="block text-[10px] font-bold uppercase tracking-wider text-[#1c5d99] truncate">Atendimento ao
                   Cliente</span>
-                <span class="font-extrabold text-sm text-[#0f172a] block mt-0.5">HB Atende • (31) 3851-6655</span>
+                <span class="font-extrabold text-xs sm:text-[13px] xl:text-sm text-[#0f172a] block mt-0.5 truncate">HB Atende • (31) 3851-6655</span>
               </div>
             </a>
 
             <!-- Emissor Próprio -->
             <a href="https://nfs.hbcontabilidade.com/" target="_blank" rel="noopener noreferrer"
-              class="p-3.5 rounded-2xl bg-slate-50 hover:bg-sky-50 border border-slate-200/90 hover:border-sky-200 flex items-center gap-3 transition-all duration-300 shadow-sm hover:shadow group text-left">
+              class="p-3 sm:p-3.5 rounded-2xl bg-slate-50 hover:bg-sky-50 border border-slate-200/90 hover:border-sky-200 flex items-center gap-2.5 sm:gap-3 transition-all duration-300 shadow-sm hover:shadow group text-left">
               <div
                 class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm shrink-0 border border-slate-200 group-hover:scale-105 transition-transform">
                 <img src="img/nfs.png" alt="Emissor Próprio NFS-e" class="w-6 h-6 object-contain" />
               </div>
-              <div class="leading-tight">
-                <span class="block text-[10px] font-bold uppercase tracking-wider text-[#0284c7]">Emissor Próprio
+              <div class="leading-tight min-w-0">
+                <span class="block text-[10px] font-bold uppercase tracking-wider text-[#0284c7] truncate">Emissor Próprio
                   NFS-e</span>
-                <span class="font-extrabold text-sm text-[#0f172a] block mt-0.5">nfs.hbcontabilidade.com</span>
+                <span class="font-extrabold text-xs sm:text-[13px] xl:text-sm text-[#0f172a] block mt-0.5 truncate">nfs.hbcontabilidade.com</span>
+              </div>
+            </a>
+
+            <!-- Agenda de Obrigações -->
+            <a href="https://parceiro.taskdo.com.br/autenticacao/login" target="_blank" rel="noopener noreferrer"
+              class="p-3 sm:p-3.5 rounded-2xl bg-slate-50 hover:bg-blue-50 border border-slate-200/90 hover:border-blue-200 flex items-center gap-2.5 sm:gap-3 transition-all duration-300 shadow-sm hover:shadow group text-left">
+              <div
+                class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm shrink-0 border border-blue-100 group-hover:scale-105 transition-transform text-[#1c5d99]">
+                <i class="fa-solid fa-calendar-check text-lg"></i>
+              </div>
+              <div class="leading-tight min-w-0">
+                <span class="block text-[10px] font-bold uppercase tracking-wider text-[#1c5d99] truncate">Agenda de
+                  Obrigações</span>
+                <span class="font-extrabold text-xs sm:text-[13px] xl:text-sm text-[#0f172a] block mt-0.5 truncate">parceiro.taskdo.com.br</span>
               </div>
             </a>
           </div>
@@ -682,7 +701,7 @@
       <!-- Client Tools Grid (4 Columns) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- Card 1: Taskdo (Agenda de Obrigações) -->
+        <!-- Card 1: Agenda de Obrigações -->
         <div class="client-area-card group reveal delay-100 flex flex-col justify-between">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
@@ -697,9 +716,9 @@
             </div>
             <div>
               <h3 class="text-lg font-bold text-[#0f172a] font-display group-hover:text-[#1c5d99] transition-colors">
-                Taskdo
+                Agenda de Obrigações
               </h3>
-              <span class="text-xs font-semibold text-[#1c5d99] block">Agenda de Obrigações</span>
+              <span class="text-xs font-semibold text-[#1c5d99] block">Portal do Cliente</span>
               <p class="text-slate-600 text-xs leading-relaxed mt-2">
                 Consulte impostos, guias de pagamento e envie documentos da sua empresa em tempo real.
               </p>
@@ -714,7 +733,7 @@
           <div class="pt-5">
             <a href="https://parceiro.taskdo.com.br/autenticacao/login" target="_blank" rel="noopener noreferrer"
               class="btn-primary w-full justify-center text-xs py-2.5 shadow-sm">
-              <span>Acessar Taskdo</span>
+              <span>Acessar Agenda de Obrigações</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
             </a>
           </div>
@@ -931,13 +950,13 @@
         <!-- Área do Cliente & Suporte -->
         <a href="https://parceiro.taskdo.com.br/autenticacao/login" target="_blank" rel="noopener noreferrer"
           class="hub-card" data-category="cliente"
-          data-keywords="taskdo agenda de obrigacoes guias das tributos impostos documentos">
+          data-keywords="agenda de obrigacoes guias das tributos impostos documentos taskdo">
           <div class="hub-card-icon bg-blue-50 text-[#1c5d99] border border-blue-100">
             <i class="fa-solid fa-clipboard-check"></i>
           </div>
           <div class="hub-card-body">
             <span class="hub-badge text-[#1c5d99] bg-blue-50 border-blue-200">Área do Cliente</span>
-            <h4 class="hub-card-title">Agenda de Obrigações (Taskdo)</h4>
+            <h4 class="hub-card-title">Agenda de Obrigações</h4>
             <p class="hub-card-desc">Acesse guias de impostos, certidões e envio de documentos.</p>
           </div>
           <i class="fa-solid fa-arrow-up-right-from-square hub-card-arrow"></i>
@@ -1523,7 +1542,7 @@
             <i class="fa-solid fa-rocket text-emerald-600"></i> Acesso & Crescimento
           </h3>
           <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-            Liberamos seu acesso exclusivo ao Portal e App TaskDo. Sua empresa passa a contar com suporte consultivo de
+            Liberamos seu acesso exclusivo ao Portal e App da Agenda de Obrigações. Sua empresa passa a contar com suporte consultivo de
             alta performance e total segurança.
           </p>
         </div>
@@ -1667,7 +1686,7 @@
     </div>
   </section>
 
-  <!-- Aplicativo Mobile HB Contabilidade / TaskDo & Suporte Remoto -->
+  <!-- Aplicativo Mobile HB Contabilidade / Agenda de Obrigações & Suporte Remoto -->
   <section id="app-mobile" class="py-20 bg-slate-50 relative overflow-hidden">
     <div class="container mx-auto px-4 max-w-7xl">
       <div
@@ -1680,7 +1699,7 @@
             <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
               <span
                 class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold uppercase tracking-wider">
-                <i class="fa-solid fa-mobile-screen-button"></i> Taskdo (Agenda de Obrigações)
+                <i class="fa-solid fa-mobile-screen-button"></i> Agenda de Obrigações
               </span>
               <span
                 class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-[#1c5d99] border border-blue-200 text-xs font-bold uppercase tracking-wider">
@@ -1693,7 +1712,7 @@
             </h2>
 
             <p class="text-slate-600 text-base leading-relaxed">
-              Com o aplicativo oficial <strong>Taskdo (Agenda de Obrigações)</strong>, você solicita serviços, acompanha
+              Com o aplicativo da <strong>Agenda de Obrigações</strong>, você solicita serviços, acompanha
               impostos, visualiza certidões e envia documentos direto pelo smartphone. E para assistência técnica ágil
               no seu computador, utilize o <strong>UltraViewer (Acesso Remoto)</strong>.
             </p>
@@ -1762,7 +1781,7 @@
                     <div
                       class="w-7 h-7 rounded-lg bg-blue-50 flex items-center justify-center text-[#1c5d99] text-xs font-bold">
                       HB</div>
-                    <span class="text-xs font-bold text-[#0f172a]">TaskDo Mobile</span>
+                    <span class="text-xs font-bold text-[#0f172a]">Agenda de Obrigações</span>
                   </div>
                   <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
                 </div>
@@ -1983,7 +2002,7 @@
             <i class="fa-solid fa-cloud-arrow-up"></i>
           </div>
           <div>
-            <span class="block text-xs font-bold text-[#0f172a]">TaskDo & Qyon</span>
+            <span class="block text-xs font-bold text-[#0f172a]">Agenda de Obrigações & Qyon</span>
             <span class="block text-[10px] text-slate-500">Plataformas em Nuvem</span>
           </div>
         </div>
@@ -2086,7 +2105,7 @@
           <div class="faq-content">
             <p class="text-slate-600 text-xs sm:text-sm leading-relaxed pt-3">
               Ao se tornar cliente HB, você tem acesso às nossas ferramentas na <a href="#area-cliente"
-                class="text-[#1c5d99] underline font-bold">Área do Cliente</a> (Portal TaskDo, Emissor Próprio NFS-e e
+                class="text-[#1c5d99] underline font-bold">Área do Cliente</a> (Portal Agenda de Obrigações, Emissor Próprio NFS-e e
               Gestão de Notas QYON) e pode baixar o app no seu smartphone.
             </p>
           </div>
@@ -2354,7 +2373,7 @@
             <li>
               <a href="https://parceiro.taskdo.com.br/autenticacao/login" target="_blank" rel="noopener noreferrer"
                 class="flex items-center gap-1.5 text-[#38bdf8] hover:underline font-semibold">
-                <i class="fa-solid fa-clipboard-check"></i> Agenda de Obrigações (Taskdo)
+                <i class="fa-solid fa-clipboard-check"></i> Agenda de Obrigações
               </a>
             </li>
             <li>
